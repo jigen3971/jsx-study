@@ -10,16 +10,28 @@
 
   <div class="container">
 
-    <h1>メルビンN4活用トレーニング</h1>
+    <h1>メルビンN4会話トレーニング</h1>
+
+    <div class="category-buttons">
+      <button onclick="setCategory('hospital')">🏥 びょういん</button>
+      <button onclick="setCategory('medicine')">💊 くすり</button>
+    </div>
 
     <div class="card">
       <h2>問題</h2>
 
-      <p id="question">かきます → て形</p>
+      <div class="chat-box">
+        <p class="doctor">👩 びょういんの人</p>
+        <p id="roleText"></p>
+        <p id="question"></p>
+        <p class="me">🧑 あなた</p>
+      </div>
 
       <input type="text" id="answer" placeholder="ここに入力">
 
+      <button onclick="speakQuestion()">🔊 きく</button>
       <button onclick="checkAnswer()">答え合わせ</button>
+      <button onclick="newQuestion()">つぎへ</button>
 
       <p id="result"></p>
     </div>
